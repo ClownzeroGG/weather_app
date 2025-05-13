@@ -178,12 +178,12 @@ searchInput.addEventListener("keydown", (event) => {
 });
 
 // поиск по ip
-window.addEventListener('load', async () => {
-    try {
-        const location = await getLocationByIP();
-        await checkWeather(location);
-    } catch (error) {
-        console.error("Ошибка при получении местоположения:", error);
+// window.addEventListener('load', async () => {
+//     try {
+//         const location = await getLocationByIP();
+//         await checkWeather(location);
+//     } catch (error) {
+//         console.error("Ошибка при получении местоположения:", error);
 
-    }
+//     }
 });
