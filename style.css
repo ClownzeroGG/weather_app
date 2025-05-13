@@ -142,6 +142,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation:box 3s linear infinite alternate;
   }
   .weather-box {
     width: 80%;
@@ -164,6 +165,7 @@ body {
   .weather-icon{
     width: 80px;
     height: 80px;
+    animation: rt 5s linear infinite alternate;
   }
   .weather-temp-status{
     margin-top: 10px;
@@ -171,6 +173,29 @@ body {
   .weather-info img{
     width: 70px;
     height: 70px;
+  }
+   @keyframes box {
+    0%{
+      transform: translateY(-2px); /* Меньшее смещение */
+    }
+    50%{
+      transform: translateY(2px);
+    }
+    100%{
+      transform: translateY(-2px);
+    }
+  }
+
+  @keyframes rt {
+    0%{
+      transform: rotate(-3deg); /* Меньший угол вращения */
+    }
+    50%{
+      transform: rotate(3deg);
+    }
+    100%{
+      transform: rotate(-3deg);
+    }
   }
 }
 /* анимации */
