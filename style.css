@@ -142,7 +142,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation:box 3s linear infinite alternate;
+    animation:box 6s linear infinite alternate;
   }
   .weather-box {
     width: 80%;
