@@ -8,7 +8,7 @@ const errorText = document.querySelector(".error");
 
 // поисковик город
 async function getCoordinates(city) {
-    const geocodingApiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
+    const geocodingApiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
     const response = await fetch(geocodingApiUrl);
     const data = await response.json();
     if (data && data.length > 0) {
@@ -28,7 +28,7 @@ async function getUvIndex(lat, lon) {
 
 // качество воздуха
 async function getAirQuality(lat, lon) {
-    const airPollutionApiUrl = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+    const airPollutionApiUrl = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`;
     const response = await fetch(airPollutionApiUrl);
     const data = await response.json();
     if (data && data.list && data.list.length > 0) {
@@ -61,7 +61,7 @@ async function getLocation() {
 
 // получение города по координатам
 async function getCityFromCoordinates(lat, lon) {
-    const reverseGeocodingUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${apiKey}`;
+    const reverseGeocodingUrl = `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${apiKey}`;
     const response = await fetch(reverseGeocodingUrl);
     const data = await response.json();
     if (data && data.length > 0) {
