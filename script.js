@@ -69,6 +69,22 @@ async function getCityFromCoordinates(lat, lon) {
     }
     return null;
 }
+// получение координат по ip
+async function getLocationByIP() {
+    try {
+        const response = await fetch('https://ipapi.co/json/');
+        const data = await response.json();
+        return {
+            lat: data.latitude,
+            lon: data.longitude,
+            city: data.city
+        };
+    } catch (error) {
+        console.error("Ошибка при получении местоположения по IP:", error);
+        throw error;
+    }
+}
+
 // проверка погоды
 async function checkWeather(cityOrCoords) {
     let city;
@@ -157,5 +173,16 @@ searchInput.addEventListener("keydown", (event) => {
     if (event.keyCode === 13) {
         checkWeather(searchInput.value);
         searchInput.value = "";
+    }
+});
+// поиск по ip
+window.addEventListener('load', async () => {
+    try {
+        const location = await getLocationByIP();
+        await checkWeather(location);
+    } catch (error) {
+        console.error("Ошибка при получении местоположения:", error);
+        errorText.style.display = "block";
+        weather.style.display = "none";
     }
 });
