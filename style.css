@@ -5,7 +5,7 @@
 }
   
 body {
-  background-color: #301844;
+  background: linear-gradient(to bottom,#2e1b3d, #442462, #502e6c);
   font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
@@ -31,6 +31,7 @@ body {
   box-shadow: 0 0 10px 0 rgba(201, 201, 201, 0.5);
   padding: 20px;
   margin-top: 0;
+  color:#2e1b3d;
 } 
 .search-box {
   border-radius: 20px;
@@ -93,7 +94,7 @@ body {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 600;
 } 
 .weather-temp-status {
@@ -131,4 +132,68 @@ body {
 .weather-info h4 {
   font-size: 18px;
   color: #555;
+}
+/* адаптация */
+@media (width <768px) {
+  .container {
+    max-width: 540px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .weather-box {
+    width: 80%;
+    height: 650px;
+    margin-top: 20px;
+  }
+  .weather-info {
+    width: 80%;
+    padding-bottom: 100px;
+  }
+  h1{
+    font-size: 34px;
+  }
+  h2{
+    font-size: 10px;
+  }
+  h4{
+    font-size: 14px;
+  }
+  .weather-icon{
+    width: 80px;
+    height: 80px;
+  }
+  .weather-temp-status{
+    margin-top: 10px;
+  }
+  .weather-info img{
+    width: 70px;
+    height: 70px;
+  }
+}
+/* анимации */
+@keyframes rt {
+  0%{
+    transform: rotate(-5deg);
+  }
+  50%{
+    transform: rotate(5deg);
+  }
+  100%{
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes box {
+  0%{
+    transform: translateY(-5px);
+  }
+  50%{
+    transform: translateY(5px);
+  }
+  100%{
+    transform: translateY(-5px);
+  }
 }
