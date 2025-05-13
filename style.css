@@ -11,7 +11,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  animation: box 8s linear infinite;
 }
 .container {
   width: 500px;
@@ -19,20 +18,21 @@ body {
   border-radius: 5px;
   border: none;
   transition: 0.4s;
+  animation: box 5s linear infinite;
 }
   
 .weather-box {
   height: 700px;
-  background-color: #d6d6d6;
+  background: linear-gradient(to bottom, #8fa9b6, #e6e6e6);
   border-radius: 20px;
   border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 10px 0 rgba(201, 201, 201, 0.5);
+  box-shadow: 0 0 10px 0 rgba(228, 227, 227, 0.5);
   padding: 20px;
   margin-top: 0;
-  color:#2e1b3d;
+  color: #2e1b3d;
 } 
 .search-box {
   border-radius: 20px;
@@ -85,7 +85,7 @@ body {
   margin-top: 30px;
   margin-bottom: 8px;
   z-index: 2;
-  animation: rt 6s linear infinite;
+  animation: rt 8s linear infinite;
 }
   
 .weather-icon img {
@@ -135,16 +135,15 @@ body {
   font-size: 18px;
   color: #555;
 }
-/* адаптация */
+
 @media (width <768px) {
   .container {
     max-width: 540px;
-    height: 90vh;
+    min-height: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation:box 6s linear infinite alternate;
   }
   .weather-box {
     width: 80%;
@@ -167,7 +166,6 @@ body {
   .weather-icon{
     width: 80px;
     height: 80px;
-    animation: rt 5s linear infinite alternate;
   }
   .weather-temp-status{
     margin-top: 10px;
@@ -176,31 +174,7 @@ body {
     width: 70px;
     height: 70px;
   }
-   @keyframes box {
-    0%{
-      transform: translateY(-2px); /* Меньшее смещение */
-    }
-    50%{
-      transform: translateY(2px);
-    }
-    100%{
-      transform: translateY(-2px);
-    }
-  }
-
-  @keyframes rt {
-    0%{
-      transform: rotate(-3deg); /* Меньший угол вращения */
-    }
-    50%{
-      transform: rotate(3deg);
-    }
-    100%{
-      transform: rotate(-3deg);
-    }
-  }
 }
-/* анимации */
 @keyframes rt {
   0%{
     transform: rotate(-5deg);
