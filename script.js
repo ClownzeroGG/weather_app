@@ -159,4 +159,3 @@ searchInput.addEventListener("keydown", (event) => {
         searchInput.value = "";
     }
 });
-});
