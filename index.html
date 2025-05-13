@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="weather-box">
+            <div class="search-box">
+                <input type="text" placeholder="Enter city name" id="city-input">
+                <button><img src="/img/search_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt=""></button>
+            </div>
+            <div class="weather-icon">
+                <img src="/img/sunny.svg" alt="">                
+            </div>
+            <div class="city">
+                <h1 class="city-name">New York</h1>
+            </div>
+            <div class="weather-temp-status">
+                <h1 class="temp">20°C</h1>
+                <h2 class="status">Sunny</h2>
+            </div>
+        </div>
+        <div class="weather-info">
+          <div class="air">
+            <img src="/img/airware_24dp_301844_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+            <h3 >Air Quality</h3>
+            <h4 id="air">Good</h4>
+          </div>
+          <div class="wind">
+            <img src="/img/wind_power_24dp_301844_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+            <h3 >Wind</h3>
+            <h4 id="wind">10 km/h</h4>
+          </div>
+          <div class="uv">
+            <img src="/img/beach_access_24dp_301844_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+            <h3 >UV Index</h3>
+            <h4 id="uv">10</h4>
+          </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
