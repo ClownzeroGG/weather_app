@@ -71,20 +71,20 @@ async function getCityFromCoordinates(lat, lon) {
 }
 
 // получение координат по ip
-async function getLocationByIP() {
-    try {
-        const response = await fetch('https://ipapi.co/json/');
-        const data = await response.json();
-        return {
-            lat: data.latitude,
-            lon: data.longitude,
-            city: data.city
-        };
-    } catch (error) {
-        console.error("Ошибка при получении местоположения по IP:", error);
-        throw error;
-    }
-}
+// async function getLocationByIP() {
+//     try {
+//         const response = await fetch('https://ipapi.co/json/');
+//         const data = await response.json();
+//         return {
+//             lat: data.latitude,
+//             lon: data.longitude,
+//             city: data.city
+//         };
+//     } catch (error) {
+//         console.error("Ошибка при получении местоположения по IP:", error);
+//         throw error;
+//     }
+// }
 
 // проверка погоды
 async function checkWeather(cityOrCoords) {
