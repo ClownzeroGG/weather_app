@@ -184,7 +184,6 @@ window.addEventListener('load', async () => {
         await checkWeather(location);
     } catch (error) {
         console.error("Ошибка при получении местоположения:", error);
-        errorText.style.display = "block";
-        weather.style.display = "none";
+
     }
 });
